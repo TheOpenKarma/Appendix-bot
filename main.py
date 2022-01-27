@@ -39,13 +39,7 @@ async def on_message(message):
     if mention in message.content:
         await message.channel.send("Hello there!")
 
-@bot.event
-async def on_server_join(ctx):
-    for guild in bot.guilds:
-        for channel in guild.text_channels:
-            if channel.permissions_for(guild.me).say:
-                await ctx.message.channel.send('Hello! \n')
-                break
+
 
 # Fill with the path to all of your cogs (in `cogs` folder)
 extensions = [
