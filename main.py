@@ -33,17 +33,15 @@ async def on_ready():
           "User ID " + str(bot.user.id),
           sep='\n  ')
 
-@bot.event
-async def on_message(message):
-    mention = f'<@!{bot.user.id}>'
-    if mention in message.content:
-        await message.channel.send("Hello there!")
+
 
 
 
 # Fill with the path to all of your cogs (in `cogs` folder)
 extensions = [
     'cogs.dev_cog_commands',
+
+    'cogs.games',
 
     'cogs.misc_cogs'
 ]
